@@ -1,5 +1,5 @@
 const defaultInput = "\
-# Bienvenue dans mon interpréteur GitHub\n\
+# Bienvenue dans mon interpréteur Markdown\n\
 ___\n\
 ## Voici un titre...\n\
 ### ...Et un sous-titre par exemple\n\
