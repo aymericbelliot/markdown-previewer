@@ -2,24 +2,35 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      input: "",
+      output: ""
     }
   }
+
+  changeInput(event) {
+    this.setState({
+      input: event.target.value,
+      output: marked(event.target.value)
+    });
+    document.getElementById("preview").innerHTML = this.state.output;
+  }
+
+
 
   render() {
     return (
       <div className="App container-fluid">
-        <Editor/>
-        <Previewer/>
+        <Editor change={this.changeInput.bind(this)} input={this.state.input} />
+        <Previewer output={this.state.output} />
       </div>
     );
   }
 }
 
 class Editor extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
+
+  handleChange() {
+    this.props.change(event);
   }
 
   render() {
@@ -28,18 +39,13 @@ class Editor extends React.Component {
         <div className="card-header d-flex justify-content-between align-items-center">
           Editor<i className="fas fa-expand-arrows-alt"></i>
         </div>
-        <textarea id="editor" className="card-body" defaultValue="hello"></textarea>
+        <textarea id="editor" className="card-body" onChange={this.handleChange.bind(this)} value={this.props.intput}></textarea>
       </div>
     );
   }
 }
 
 class Previewer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
 
   render() {
     return (
@@ -47,10 +53,11 @@ class Previewer extends React.Component {
         <div className="card-header d-flex justify-content-between align-items-center">
           Previewer<i className="fas fa-expand-arrows-alt"></i>
         </div>
-        <input id="preview" type="text" className="card-body" />
-      </div>
+        <object id="preview" type="type/html" className="card-body"></object>
+      </div >
     );
   }
 }
 
+// Rend Application in html
 ReactDOM.render(<App />, document.querySelector("#root"));
