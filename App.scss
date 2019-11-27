@@ -1,6 +1,6 @@
-$bg-color: #9add9f;
+$bg-color: #1abc9c;
 $card-color: #b6f6bb;
-$card-header-color: #78c17d;
+$card-header-color: #16a085;
 $shadow-color: #999;
 
 .App {
@@ -9,5 +9,6 @@ $shadow-color: #999;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: $bg-color;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8em;
 }
