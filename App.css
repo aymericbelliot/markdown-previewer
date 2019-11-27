@@ -1,30 +1,16 @@
 .App {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #CCC;
-  transition-duration: 1s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9add9f;
 }
-
-#quote-box {
-  max-width: 600px;
-  padding: 50px;
-  border-radius: 5px;
-  background-color: white;
-}
-
-#text {
-  font-size: 1.2em;
-  font-weight: 700;
-  color: white;
-}
-
-#author {
-  font-size: 1em;
-  font-weight: 500;
-  color: black;
-}
+/*# sourceMappingURL=App.css.map */

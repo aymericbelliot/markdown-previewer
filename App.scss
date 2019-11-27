@@ -1,0 +1,13 @@
+$bg-color: #9add9f;
+$card-color: #b6f6bb;
+$card-header-color: #78c17d;
+$shadow-color: #999;
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bg-color;
+}
