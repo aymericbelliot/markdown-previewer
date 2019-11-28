@@ -36,7 +36,6 @@ class App extends React.Component {
       input: event.target.value,
       output: marked(event.target.value).replace('\n', '<br>')
     });
-    console.log(this.state.output);
   }
 
   render() {
